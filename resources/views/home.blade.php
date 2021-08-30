@@ -33,7 +33,6 @@
                      <th scope="col">Country</th>
                      <th scope="col">EMAIL</th>
                      <th scope="col"></th>
-                     <th scope="col"></th>
                  </tr>
              </thead>                               
                  <tbody>
@@ -49,11 +48,6 @@
                                     @if(Auth::user()->roles_id == 1)
                                         <a href="{{url('/user/profile/'.$user->id)}}">Изменить</a>
                                     @endif                                    
-                                </th>
-                                 <th scope="row">
-                                    @if(Auth::user()->roles_id == 1)
-                                         <a href="{{url('/adress-book/delete/'.$user->id)}}">Удалить</a>
-                                    @endif                                   
                                 </th>
                              </tr>
                          @endforeach
